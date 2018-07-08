@@ -8,3 +8,9 @@ type AEAD interface {
 	Seal(dst, src []byte, packetNumber protocol.PacketNumber, associatedData []byte) []byte
 	Overhead() int
 }
+
+// A CTR implements the CTR mode needed QUIC's packet number encryption.
+type CTR interface {
+	Encrypt(plain, iv []byte) error
+	Decrypt(ciphertext, iv []byte) error
+}
