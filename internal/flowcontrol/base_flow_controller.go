@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/congestion"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"github.com/lukedirtwalker/quic-go/internal/congestion"
+	"github.com/lukedirtwalker/quic-go/internal/protocol"
+	"github.com/lukedirtwalker/quic-go/internal/utils"
 )
 
 type baseFlowController struct {

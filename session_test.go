@@ -15,16 +15,16 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/lucas-clemente/quic-go/internal/ackhandler"
-	"github.com/lucas-clemente/quic-go/internal/crypto"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/mocks"
-	"github.com/lucas-clemente/quic-go/internal/mocks/ackhandler"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/testdata"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/lucas-clemente/quic-go/qerr"
+	"github.com/lukedirtwalker/quic-go/internal/ackhandler"
+	"github.com/lukedirtwalker/quic-go/internal/crypto"
+	"github.com/lukedirtwalker/quic-go/internal/handshake"
+	"github.com/lukedirtwalker/quic-go/internal/mocks"
+	"github.com/lukedirtwalker/quic-go/internal/mocks/ackhandler"
+	"github.com/lukedirtwalker/quic-go/internal/protocol"
+	"github.com/lukedirtwalker/quic-go/internal/testdata"
+	"github.com/lukedirtwalker/quic-go/internal/utils"
+	"github.com/lukedirtwalker/quic-go/internal/wire"
+	"github.com/lukedirtwalker/quic-go/qerr"
 )
 
 type mockConnection struct {

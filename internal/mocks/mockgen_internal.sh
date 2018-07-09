@@ -6,9 +6,9 @@
 # Afterwards, it corrects the import paths (replaces internalpackage back to internal).
 
 TEMP_DIR=$(mktemp -d)
-mkdir -p $TEMP_DIR/src/github.com/lucas-clemente/quic-go/internalpackage
+mkdir -p $TEMP_DIR/src/github.com/lukedirtwalker/quic-go/internalpackage
 
-cp -r $GOPATH/src/github.com/lucas-clemente/quic-go/internal/* $TEMP_DIR/src/github.com/lucas-clemente/quic-go/internalpackage
+cp -r $GOPATH/src/github.com/lukedirtwalker/quic-go/internal/* $TEMP_DIR/src/github.com/lukedirtwalker/quic-go/internalpackage
 find $TEMP_DIR -type f -name "*.go" -exec sed -i '' 's/internal/internalpackage/g' {} \;
 
 export GOPATH="$TEMP_DIR:$GOPATH"
