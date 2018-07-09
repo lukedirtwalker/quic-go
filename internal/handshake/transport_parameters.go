@@ -139,8 +139,8 @@ func readTransportParameters(paramsList []transportParameter) (*TransportParamet
 				return nil, fmt.Errorf("wrong length for max_packet_size: %d (expected 2)", len(p.Value))
 			}
 			maxPacketSize := protocol.ByteCount(binary.BigEndian.Uint16(p.Value))
-			if maxPacketSize < 1200 {
-				return nil, fmt.Errorf("invalid value for max_packet_size: %d (minimum 1200)", maxPacketSize)
+			if maxPacketSize < protocol.MinInitialPacketSize {
+				return nil, fmt.Errorf("invalid value for max_packet_size: %d (minimum %d)", maxPacketSize, protocol.MinInitialPacketSize)
 			}
 			params.MaxPacketSize = maxPacketSize
 		case disableMigrationParameterID:

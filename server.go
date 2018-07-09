@@ -425,7 +425,8 @@ func (s *server) handleGQUICPacket(
 		// This is (potentially) a Client Hello.
 		// Make sure it has the minimum required size before spending any more ressources on it.
 		if len(packetData) < protocol.MinClientHelloSize {
-			return errors.New("dropping small packet for unknown connection")
+			s.logger.Errorf("small packet, len: %v, min: %v", len(packetData), protocol.MinClientHelloSize)
+			//return errors.New("dropping small packet for unknown connection")
 		}
 
 		version := hdr.Version
